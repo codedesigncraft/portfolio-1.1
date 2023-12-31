@@ -1,0 +1,98 @@
+
+.form-container {
+    grid-column: col-start / col-end 9;
+    grid-row: 7 / 8;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5rem 0;
+}
+
+.form {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 47%;
+    margin: 0 auto;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    // background-image: linear-gradient(to right, rgba(11, 115, 133, 0.6), rgba(232, 89, 12, 0.6)), url(/img/form-nature.jpg);
+    // background-size: cover;
+    box-shadow: var(--boxShadow);
+    background-color: transparent;
+    position: relative;
+    background-color: #002233;
+
+    &__btn {
+        padding: 3.6rem 0;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 50%;
+    }
+    @media only screen and (max-width: $bp-small) {
+        width: 70%;
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--orange);
+        letter-spacing: .5rem;
+        padding: 2rem;
+    }
+
+    &__group {
+
+        padding:0 2rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__input {
+        font-family: inherit;
+        color: #f7f7f7;
+        font-size: 1.8rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid transparent;
+        width: 100%;
+        display: block;
+        transition: all .3s;
+
+        border: .1px solid rgba(238, 238, 238, 0.4);
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(238, 238, 238, 0.2);
+            border-bottom: 2px solid #0b7285;
+        }
+    
+        &:focus:invalid {
+            border-bottom: 1px solid #e8590c;
+        }
+    
+        &::-webkit-input-placeholder {
+            color: #adb5bd;
+        }
+    }
+
+    &__label {
+        font-size: 1.6rem;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+        color: #5643fa;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+   
+}

@@ -1,0 +1,14 @@
+
+.footer {
+    grid-column: col-start / col-end 9;
+    grid-row: 8 / 9;
+    padding: 5rem 0 15rem 0;
+    background-image: url(wave.png);
+    background-size: cover;
+
+    &__copyright {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--black);
+    }
+}

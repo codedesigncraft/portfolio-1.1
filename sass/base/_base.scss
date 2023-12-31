@@ -1,0 +1,55 @@
+:root {
+    --yellow: #F5C32C;
+    --orange : #FCA61F;
+    --black : #242D49;
+    --gray : #788097;
+    --blueCard : #DDF8FE;
+    --purple : rgb(238 210 255);
+    --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
+    --orangeCard : rgba(252, 166, 31, 0.45);
+    --smboxShadow : -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 56.25em;    // 900px;
+$bp-small: 37.5em;    // 600px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 45%;
+    }
+    @media only screen and (max-width: $bp-small) {
+        font-size: 35%;
+    }
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    color: #ccc;
+    font-weight: 300;
+    line-height: 1.6;
+    padding: 1rem 3.2rem;
+    overflow-x: hidden;
+    padding: 3.2rem 8rem;
+}
